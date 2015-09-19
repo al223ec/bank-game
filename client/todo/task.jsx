@@ -6,7 +6,7 @@ Task = React.createClass({
     task: React.PropTypes.object.isRequired,
     showPrivateButton: React.PropTypes.bool.isRequired
   },
-
+  
   toggleChecked() {
     // Set the checked property to the opposite of its current value
     Meteor.call("setChecked", this.props.task._id, ! this.props.task.checked);
@@ -28,7 +28,7 @@ Task = React.createClass({
     // Add "checked" and/or "private" to the className when needed
       const taskClassName = (this.props.task.checked ? "checked" : "") + " " +
         (this.props.task.private ? "private" : "");
-    
+
     return (
       <li className={taskClassName}>
         <button className="delete" onClick={this.deleteThisTask}>
