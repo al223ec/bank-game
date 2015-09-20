@@ -1,3 +1,4 @@
+
 // Task component - represents a single todo item
 Task = React.createClass({
   propTypes: {
@@ -6,7 +7,7 @@ Task = React.createClass({
     task: React.PropTypes.object.isRequired,
     showPrivateButton: React.PropTypes.bool.isRequired
   },
-  
+
   toggleChecked() {
     // Set the checked property to the opposite of its current value
     Meteor.call("setChecked", this.props.task._id, ! this.props.task.checked);

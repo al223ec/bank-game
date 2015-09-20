@@ -4,10 +4,10 @@ if (Meteor.isServer) {
   // Only publish tasks that are public or belong to the current user
   Meteor.publish("tasks", function () {
     return Tasks.find({
-      $or: [
-        { private: {$ne: true} },
-        { owner: this.userId }
-      ]
+      // $or: [
+      //   { private: {$ne: true} },
+      //   { owner: this.userId }
+      // ]
     });
   });
 }
@@ -43,7 +43,7 @@ Meteor.methods({
       // If the task is private, make sure only the owner can check it off
       throw new Meteor.Error("not-authorized");
     }
-    
+
     Tasks.update(taskId, { $set: { checked: setChecked} });
   },
 

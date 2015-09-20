@@ -71,6 +71,7 @@ Todo = React.createClass({
 
           <LoginUIWrapper />
 
+
           { this.data.currentUser ?
             <form className="new-task" onSubmit={this.handleSubmit} >
               <input
@@ -80,6 +81,7 @@ Todo = React.createClass({
             </form> : ''
           }
         </header>
+        { this.data.currentUser ? "show bankgame" : 'Please log in to be able to play the game' }
 
         <ul>
           {this.renderTasks()}
