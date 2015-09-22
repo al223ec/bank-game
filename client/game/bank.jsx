@@ -19,8 +19,8 @@ Bank = React.createClass({
   // deleteThisTask() {
   //   Meteor.call("removeTask", this.props.task._id);
   // },
-    setInterestRate(){  
-
+    setInterestRate(){
+      Meteor.call("setMortgageRate", this.props.bank._id); 
     },
 
 
