@@ -10,7 +10,8 @@ Game = React.createClass({
     let query = {};
 
     return {
-      bank: Banks.findOne({owner: Meteor.userId(), game: this.props.game._id })
+      bank: Banks.findOne({owner: Meteor.userId(), game: this.props.game._id }),
+      currentUser: Meteor.user()
     }
   },
 
@@ -26,6 +27,17 @@ Game = React.createClass({
   // deleteThisTask() {
   //   Meteor.call("removeTask", this.props.task._id);
   // },
+
+  handleSubmit(event) {
+    event.preventDefault();
+
+    // Find the text field via the React ref
+    var text = React.findDOMNode(this.refs.textInput).value.trim();
+    Meteor.call("addBank", text);
+    // Clear form
+
+    React.findDOMNode(this.refs.textInput).value = "";
+  },
 
   renderBank() {
      return (<Bank
@@ -49,7 +61,17 @@ Game = React.createClass({
             <li> Bank:: </li>
             { this.renderBank() }
           </ul>
-        </li>
+
+        { this.data.bank ? '' :
+          <form className="new-task" onSubmit={this.handleSubmit} >
+            <input
+              type="text"
+              ref="textInput"
+              placeholder="Type to add a bank" />
+            </form>
+        }
+
+      </li>
       );
     }
   });

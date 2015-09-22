@@ -13,31 +13,12 @@ App = React.createClass({
       currentUser: Meteor.user()
     };
   },
-  renderBanks() {
-    // Get tasks from this.data.tasks
-   return this.data.banks.map((bank) => {
-     return <Bank
-       key={bank._id}
-       bank={bank} />;
-   });
-  },
   renderGames(){
     return this.data.games.map((game) =>{
       return <Game
         key={game._id}
         game={game} />;
     });
-  },
-
-  handleSubmit(event) {
-    event.preventDefault();
-
-    // Find the text field via the React ref
-    var text = React.findDOMNode(this.refs.textInput).value.trim();
-    Meteor.call("addBank", text);
-    // Clear form
-
-    React.findDOMNode(this.refs.textInput).value = "";
   },
   render() {
     return (
