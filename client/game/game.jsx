@@ -52,15 +52,14 @@ Game = React.createClass({
       //   (this.props.task.private ? "private" : "");
 
     return (
-      <li>
+      <section className="game">
         <span className="text">
-          Game._id: <strong> { this.props.game._id }</strong>
+          Game: <strong> { this.props.game.name }</strong>
           </span>
 
-          <ul>
-            <li> Bank:: </li>
+          <h4> Din bank </h4>
             { this.renderBank() }
-          </ul>
+
 
         { this.data.bank ? '' :
           <form className="new-task" onSubmit={this.handleSubmit} >
@@ -71,7 +70,7 @@ Game = React.createClass({
             </form>
         }
 
-      </li>
+      </section>
       );
     }
   });

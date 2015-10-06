@@ -21,6 +21,7 @@ digilord:faker@1.0.7
 ejson@1.0.6
 email@1.0.6
 fastclick@1.0.3
+fourseven:scss@3.2.0
 geojson-utils@1.0.3
 grigio:babel@0.1.7
 html-tools@1.0.4
@@ -83,3 +84,5 @@ velocity:shim@0.1.0
 velocity:source-map-support@0.3.2_1
 webapp@1.2.0
 webapp-hashing@1.0.3
+wolves:bourbon@3.0.0
+wolves:neat@3.0.0

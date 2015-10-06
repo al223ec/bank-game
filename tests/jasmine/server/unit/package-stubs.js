@@ -7085,7 +7085,7 @@ var packageMetadata = {
                 },
                 "version": {
                   "type": "constant",
-                  "value": "36dad6e9ea1ed00b28b2f7b17fef801aafd774d7"
+                  "value": "24eabeb63011342f8da05916ecdcd1fccf1c13b5"
                 },
                 "PUBLIC_SETTINGS": {
                   "type": "undefined"
@@ -7209,7 +7209,7 @@ var packageMetadata = {
             },
             "connections": {
               "type": "constant",
-              "value": 1
+              "value": 0
             },
             "timeout": {
               "type": "constant",
@@ -7852,11 +7852,11 @@ var packageMetadata = {
       "members": {
         "autoupdateVersion": {
           "type": "constant",
-          "value": "032141a3822fc28828d6ba290cfbcc3c50f17b01"
+          "value": "2d5a69867cfa5fed3e2e4c4bce6e13184c274140"
         },
         "autoupdateVersionRefreshable": {
           "type": "constant",
-          "value": "d8b9375900beeae7e793d619d01b3f536eddc535"
+          "value": "4bab33e055f4be1d4e64d2b720fd0cb80fc947b4"
         },
         "autoupdateVersionCordova": {
           "type": "constant",
@@ -8762,7 +8762,84 @@ var packageMetadata = {
                 },
                 "pid": {
                   "type": "constant",
-                  "value": 1076
+                  "value": 1439
+                },
+                "fout": {
+                  "type": "constant",
+                  "value": 31
+                },
+                "child": {
+                  "type": "object",
+                  "members": {
+                    "domain": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "signalCode": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "exitCode": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "pid": {
+                      "type": "constant",
+                      "value": 1439
+                    },
+                    "stdin": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stdout": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stderr": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stdio": {
+                      "type": "array"
+                    },
+                    "spawn": {
+                      "type": "function"
+                    },
+                    "kill": {
+                      "type": "function"
+                    },
+                    "ref": {
+                      "type": "function"
+                    },
+                    "unref": {
+                      "type": "function"
+                    },
+                    "setMaxListeners": {
+                      "type": "function"
+                    },
+                    "emit": {
+                      "type": "function"
+                    },
+                    "addListener": {
+                      "type": "function",
+                      "refID": 17
+                    },
+                    "on": {
+                      "ref": 17
+                    },
+                    "once": {
+                      "type": "function"
+                    },
+                    "removeListener": {
+                      "type": "function"
+                    },
+                    "removeAllListeners": {
+                      "type": "function"
+                    },
+                    "listeners": {
+                      "type": "function"
+                    }
+                  }
                 },
                 "getTaskName": {
                   "type": "function"
@@ -15152,6 +15229,7 @@ var packageMetadata = {
       }
     }
   },
+  "fourseven:scss": {},
   "session": {},
   "livedata": {
     "DDP": {

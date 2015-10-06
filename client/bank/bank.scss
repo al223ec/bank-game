@@ -1,0 +1,6 @@
+@import "./resources/bourbon/bourbon/bourbon";
+@import "./resources/bourbon/neat/neat";
+
+article.bank {
+  @include span-columns(12);
+}
